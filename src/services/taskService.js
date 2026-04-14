@@ -6,8 +6,8 @@ export async function getAllTasks(completed) {
   }
 
   const isCompleted = completed === 'true';
-  
-  return taskRepository.findAll();
+
+  return taskRepository.findByCompleted(isCompleted);
 }
 
 export async function createTask(newTask) {
