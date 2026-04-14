@@ -13,7 +13,7 @@ export async function getTasks(req, res, next) {
     }
   
 
-    const tasks = await taskService.getAllTasks();
+    const tasks = await taskService.getAllTasks(completed);
     res.json(tasks);
   } catch (err) {
     next(err);
